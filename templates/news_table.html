@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Articles</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Positive News Articles</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+        </tr>
+        {% for article in positive_articles %}
+        <tr>
+            <td>{{ article }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Negative News Articles</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+        </tr>
+        {% for article in negative_articles %}
+        <tr>
+            <td>{{ article }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
